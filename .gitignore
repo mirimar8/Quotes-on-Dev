@@ -29,7 +29,7 @@ node_modules/
 !plugins/
 !themes/
 !uploads/
-!README
+!README.md
 
 
 themes/*
