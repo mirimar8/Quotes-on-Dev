@@ -60,8 +60,18 @@ function qod_scripts() {
 
 	wp_enqueue_script( 'qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
+	
+	$script_url = get_template_directory_uri() . '/build/js/new-quote.min.js';
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'qod_quotes', $script_url, array( 'jquery' ), false, true );
+   wp_localize_script( 'qod_quotes', 'qod_vars', array(
+	   'rest_url' => esc_url_raw( rest_url() ),
+	   'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
+	   'post_id' => get_the_ID()
+   ) );
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
+
 
 /**
  * Custom functions that act independently of the theme templates.

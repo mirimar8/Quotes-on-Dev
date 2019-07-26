@@ -31,6 +31,8 @@ node_modules/
 !uploads/
 !README.md
 
+plugins/*
+
 
 themes/*
 !themes/Quotes-on-Dev-theme/

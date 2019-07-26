@@ -593,3 +593,6 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* Submit a Quote Page */
+.page, .home {
+  background-color: #222222;
+  color: #ffffff; }
