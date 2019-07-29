@@ -1,7 +1,7 @@
 jQuery(function ($) {
     $(".new-quote-button").on("click", function (event) {
         event.preventDefault();
-        $(".post").text('');
+        $(".home-quotes").text('');
         $.ajax({
             method: "GET",
             url: qod_vars.rest_url + "wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1",
@@ -10,10 +10,8 @@ jQuery(function ($) {
             }
         }).done(function (response) {
             console.log(response);
-            console.log(response[0].title.rendered);
-            console.log(response[0].content.rendered);
-            $(".post").html(`<div class="content" ${response[0].content.rendered} ${response[0].title.rendered} ${response[0]._qod_quote_source} </div>`);
-            history.pushState(response, "", response[0].link);
+            $(".home-quotes").html(`<div class="quote-para">${response[0].content.rendered}</div> <div class="quote-author">${response[0].title.rendered}</div><div class="quote-source"> ${response[0]._qod_quote_source}</div> `);
+            history.pushState(response, "", response[0].slug);
         });
     });
 

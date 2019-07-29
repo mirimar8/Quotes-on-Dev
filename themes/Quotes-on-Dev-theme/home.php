@@ -10,11 +10,34 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+		<div class="home-quotes">
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+			<?php
+				$args = array(
+				'posts_per_page'   => 1,
+				'post_type' => 'post',
+				);
+			?> 
 
-			<?php endwhile; // End of the loop. ?>
+			<?php $query = new WP_Query( $args ); ?>
+			<?php if ( $query->have_posts() ) : ?>
+				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+				
+				<?php the_content('<p class="quote-para"></p>'); ?>
+				<?php the_title('<p class="quote-author"></p>'); ?>
+					
+				
+				<?php endwhile; ?>
+					
+				
+				<?php wp_reset_postdata(); ?>
+				
+			<?php else : ?>
+				<h2>Nothing found!</h2>
+			<?php endif; ?>
+
+		</div>
+
 
 			<button type="button" class="new-quote-button">Show Me Another!</button>
 
