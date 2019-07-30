@@ -596,3 +596,6 @@ object {
 .page, .home {
   background-color: #222222;
   color: #ffffff; }
+
+.site-branding img {
+  height: 100px; }

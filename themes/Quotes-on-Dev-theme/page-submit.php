@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area logged-in-form">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		
 		<header class="entry-header">
@@ -16,15 +16,28 @@ get_header(); ?>
 	
 
 		<?php
-			if ( is_user_logged_in() ) {
-				echo '<form class="quote-submission-form" name="submit-quote">
-						<p>Author of quote</p><input type="text" name="Author of quote"/>
-						<p>Quote</p><input type="text" name="Quote"/><br>
-						<p>Where did you find this quote? (e.g. book name)</p><input type="text" name="Where was found"/>
-						<p>Provide the URL of this quote source, if available.</p><input type="text" name="Quote source"/>
-						<input type="button" onclick="check(this.form)" value="Submit Quote"/>
-					</form>'; 
-			} else { ?>
+			if ( is_user_logged_in() ) { ?>
+				<form class="quote-submission-form" name="submit-quote">
+					<div class="quote-author">
+						<label for="author">Author of quote</label>
+						<input id="author" type="text" name="Author of quote">
+					</div>
+					<div class="quote-text">	
+						<label for="quote">Quote</label>
+						<input id="quote" type="text" name="Quote">
+					</div>
+					<div class="quote-source">
+						<label for="source of quote">Where did you find this quote? (e.g. book name)</label>
+						<input id="source" type="text" name="Source">
+					</div>
+					<div class="quote-source-url">
+						<label for="url of quote source">Provide the URL of this quote source, if available.</label>
+						<input id="source-url" type="text" name="Quote source">
+					</div>
+						<input class="submit-quote-button" type="submit" value="Submit Quote">
+				</form> 
+
+			<?php } else { ?>
 				echo <?php get_template_part( 'template-parts/content', 'page' );
 			} ?>
 			

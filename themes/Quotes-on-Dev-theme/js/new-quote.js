@@ -15,4 +15,31 @@ jQuery(function ($) {
         });
     });
 
+
+    $(".quote-submission-form").on("submit", function (event) {
+        event.preventDefault();
+        const data = {
+            title: $("#author").val(),
+            content: $("#quote").val(),
+            _qod_quote_source: $("#source").val(),
+            _qod_quote_source_url: $("#source-url").val(),
+            post_status: "publish"
+        }
+        $.ajax({
+            method: "POST",
+            url: qod_vars.rest_url + "wp/v2/posts",
+            data,
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader("X-WP-Nonce", qod_vars.wpapi_nonce);
+            }
+
+
+
+        }).done(function (response) {
+            console.log("posted");
+
+        });
+    });
+
+
 });
