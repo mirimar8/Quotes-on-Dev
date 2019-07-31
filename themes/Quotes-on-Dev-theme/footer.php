@@ -8,14 +8,20 @@
 ?>
 
 			</div><!-- #content -->
+			
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
 				<div class="site-info">
-					<a href="<?php echo esc_url( 'https://redacademy.com/' ); ?>"><?php printf( esc_html( 'Brought to you by %s' ), 'RED Academy' ); ?></a>
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					</nav><!-- #site-navigation -->
+
+				
+
+					<p>Brought to you by
+					<a href="<?php echo esc_url( 'https://redacademy.com/' ); ?>">
+					<?php printf( 'RED Academy' ); ?></a></p>
+					
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->

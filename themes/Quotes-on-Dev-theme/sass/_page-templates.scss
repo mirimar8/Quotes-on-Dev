@@ -7,7 +7,35 @@
 /* Submit a Quote Page */
 
 
-.page, .home {
+body {
     background-color: $site-background-color;
     color: $font-color;
+    font-weight: 100;
+
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1080px;
+    padding: 10px;
+    height: 100vh;
+
+}
+
+h1, h2 {
+    font-weight: 400;
+}
+
+
+.archives-links {
+    display: flex;
+    flex-wrap: wrap;
+    .archives-block {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        .archives-terms {
+            padding: 5px 10px;
+        }
+    }
 }

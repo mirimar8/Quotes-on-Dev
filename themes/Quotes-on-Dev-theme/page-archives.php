@@ -17,7 +17,7 @@ get_header(); ?>
 
 			<h2>Quote Authors</h2>
 				
-			<div class="author-names">
+			<div class="archives-links">
 
 			<?php
 				$args = array(
@@ -31,7 +31,7 @@ get_header(); ?>
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				
 
-					<?php the_title( sprintf( '<p class="archive-block"><a class="archives-terms" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
+					<?php the_title( sprintf( '<p class="archives-block"><a class="archives-terms" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
 					
 				
 				<?php endwhile; ?>
@@ -46,8 +46,10 @@ get_header(); ?>
 			</div>
 
 
-			<div class="cat-names">
-				<h2>Categories</h2>
+			
+			<h2>Categories</h2>
+
+			<div class="archives-links">
 				<?php $terms = get_terms( array(
 					'taxonomy' => 'category',
 					'hide_empty' => false,
@@ -55,7 +57,7 @@ get_header(); ?>
 					if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 						$count = count( $terms );
 						$i = 0;
-						$term_list = '<p class="archive-block">';
+						$term_list = '<p class="archives-block">';
 						foreach ( $terms as $term ) {
 							$i++;
 							$term_list .= '<a class="archives-terms" href="' . esc_url( get_term_link( $term ) ) . '" alt="' . esc_attr( sprintf( __( 'View all post filed under %s', 'my_localization_domain' ), $term->name ) ) . '">' . $term->name . '</a><br>';
@@ -66,8 +68,10 @@ get_header(); ?>
 
 			</div>
 
-			<div class="tag-names">		
-				<h2>Tags</h2>
+					
+			<h2>Tags</h2>
+
+			<div class="archives-links">
 				<?php $terms = get_terms( array(
 					'taxonomy' => 'post_tag',
 					'hide_empty' => false,
@@ -75,7 +79,7 @@ get_header(); ?>
 					if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 						$count = count( $terms );
 						$i = 0;
-						$term_list = '<p class="archive-block">';
+						$term_list = '<p class="archives-block">';
 						foreach ( $terms as $term ) {
 							$i++;
 							$term_list .= '<a class="archives-terms" href="' . esc_url( get_term_link( $term ) ) . '" alt="' . esc_attr( sprintf( __( 'View all post filed under %s', 'my_localization_domain' ), $term->name ) ) . '">' . $term->name . '</a><br>';
