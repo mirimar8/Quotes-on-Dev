@@ -25,7 +25,6 @@ get_header(); ?>
 					<div class="quote-text">	
 						<label for="quote">Quote</label>
 						<textarea id="quote" rows="2"></textarea>
-						<!-- <input id="quote" type="text" name="Quote"> -->
 					</div>
 					<div class="quote-source">
 						<label for="source of quote">Where did you find this quote? (e.g. book name)</label>

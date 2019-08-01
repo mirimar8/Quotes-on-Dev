@@ -10,31 +10,38 @@ jQuery(function ($) {
             }
         }).done(function (response) {
             console.log(response);
-            $(".home-quotes").html(`<div class="quote-para">${response[0].content.rendered}</div> <div class="quote-author">${response[0].title.rendered}</div><div class="quote-source"> ${response[0]._qod_quote_source}</div> `);
+            $(".home-quotes").html(`<div class="quote-para">${response[0].content.rendered}</div> <div class="quote-author">${response[0].title.rendered}</div><span class="quote-source"> ${response[0]._qod_quote_source}</span> `);
             history.pushState(response, "", response[0].slug);
         });
     });
 
+    $quoteSubForm = $(".quote-submission-form");
 
-    $(".quote-submission-form").on("submit", function (event) {
+    $quoteSubForm.on("submit", function (event) {
         event.preventDefault();
 
         $author = $("#author").val();
         $quote = $("#quote").val();
         $source = $("#source").val();
         $sourceUrl = $("#source-url").val();
+        $errorMessage = $('#error-message');
+        $successMessage = $('#success-message');
 
-        if ($author == '' || $quote == '' || $source == '' || $sourceUrl == '') {
-            $('#error-message').html("The quote wasn't submitted. Please fill in the required fields.");
+
+        if ($author == '' || $quote == '') {
+            $quoteSubForm.trigger('reset');
+            $errorMessage.fadeIn().html("The quote wasn't submitted. Please fill in the required fields.");
+            setTimeout(function () {
+                $errorMessage.fadeOut();
+            }, 2000);
 
         } else {
-            // $('#error-message').html('');
             const data = {
-                title: $("#author").val(),
-                content: $("#quote").val(),
-                _qod_quote_source: $("#source").val(),
-                _qod_quote_source_url: $("#source-url").val(),
-                post_status: "publish"
+                title: $author,
+                content: $quote,
+                _qod_quote_source: $source,
+                _qod_quote_source_url: $sourceUrl,
+                post_status: "pending"
             }
             $.ajax({
                 method: "POST",
@@ -49,8 +56,12 @@ jQuery(function ($) {
                 // }
             }).done(function (data) {
                 console.log("posted");
-                $(".quote-submission-form").trigger('reset');
-                $('#success-message').fadeIn().html("Quote submitted successfully!");
+                $quoteSubForm.trigger('reset');
+                $successMessage.fadeIn().html("Quote submitted successfully!");
+                setTimeout(function () {
+                    $successMessage.fadeOut();
+                }, 2000);
+
 
             });
         };

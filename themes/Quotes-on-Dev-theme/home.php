@@ -22,9 +22,15 @@ get_header(); ?>
 			<?php $query = new WP_Query( $args ); ?>
 			<?php if ( $query->have_posts() ) : ?>
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+			<div class="entry-content">
+				<?php the_content('<div class="quote-para"></div>'); ?>
+			</div>
+
+			<div class="entry-meta">
+				<?php the_title('<div class="quote-author"></div>'); ?>
+				<span class="quote-source"></span>
 				
-				<?php the_content('<p class="quote-para"></p>'); ?>
-				<?php the_title('<p class="quote-author"></p>'); ?>
+			</div>
 					
 				
 				<?php endwhile; ?>

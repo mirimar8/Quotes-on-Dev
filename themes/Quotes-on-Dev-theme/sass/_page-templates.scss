@@ -11,6 +11,7 @@ body {
     background-color: $site-background-color;
     color: $font-color;
     font-weight: 100;
+    font-size: $font-size;
 
 }
 
@@ -24,6 +25,26 @@ body {
 
 h1, h2 {
     font-weight: 400;
+}
+
+
+.home-quotes {
+    font-size: 20px;
+    
+}
+.new-quote-button {
+    height: 40px;
+    width: 200px;
+    box-shadow: none;
+    text-shadow: none;
+    margin-top: 50px;
+    background-color: transparent;
+    border: 2px solid $brand-link-color;
+    color: $brand-link-color;
+}
+.new-quote-button:hover {
+    box-shadow: none;
+    border-color: $brand-link-color-hover;
 }
 
 
@@ -71,12 +92,13 @@ h1, h2 {
     }
     .submit-quote-button:hover {
         box-shadow: none;
-        border-color: $brand-link-color;
+        border-color: $brand-link-color-hover;
     }
 
     input[value] {
         color: $brand-link-color;
         font-weight: 500;
+        font-size: 14px;
     }
 }
   
