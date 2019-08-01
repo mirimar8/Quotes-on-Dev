@@ -669,8 +669,15 @@ h1, h2 {
   height: 50px;
   margin-top: 30px; }
 
-.main-navigation ul li:not(:last-child) {
-  border-right: solid 1px #fff; }
+.site-footer {
+  margin-top: 90px;
+  margin-bottom: 50px; }
 
-.main-navigation ul li {
-  line-height: 1; }
+.main-navigation {
+  padding-bottom: 15px; }
+  .main-navigation li:not(:last-child) {
+    border-right: solid 1px #fff; }
+  .main-navigation li {
+    line-height: 1;
+    padding-right: 1rem;
+    margin-right: 1rem; }

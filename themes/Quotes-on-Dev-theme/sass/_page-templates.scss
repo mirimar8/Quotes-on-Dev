@@ -46,7 +46,6 @@ h1, h2 {
         display: flex;
         flex-direction: column;
         padding: 15px 0;
-
      }
     input, textarea {
         margin-top: 10px;
@@ -63,7 +62,6 @@ h1, h2 {
         height :80px;
         width: 100%;
         color: $font-color;
-
     }
     .submit-quote-button {
         height: 40px;
@@ -80,5 +78,5 @@ h1, h2 {
         color: $brand-link-color;
         font-weight: 500;
     }
-    }
+}
   

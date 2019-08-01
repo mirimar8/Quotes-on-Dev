@@ -1,15 +1,20 @@
+.site-footer {
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
 .main-navigation {
-    ul {
-        // display:flex;
-        // padding: 0 10px;
-        li:not(:last-child) { 
-            border-right: solid 1px #fff;
-        }
-
-        li {
-            line-height: 1;
-        }
+    padding-bottom: 15px;
+    
+    li:not(:last-child) { 
+        border-right: solid 1px #fff;
     }
+
+    li {
+        line-height: 1;
+        padding-right: 1rem;
+        margin-right: 1rem;
+    }
+   
     
     
     
