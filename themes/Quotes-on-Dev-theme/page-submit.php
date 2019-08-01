@@ -35,6 +35,9 @@ get_header(); ?>
 						<input id="source-url" type="text" name="Quote source">
 					</div>
 						<input class="submit-quote-button" type="submit" value="Submit Quote">
+						<span id="error-message"></span>
+						<span id="success-message"></span>
+
 				</form> 
 
 			<?php } else { ?>
