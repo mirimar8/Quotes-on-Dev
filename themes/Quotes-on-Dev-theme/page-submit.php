@@ -41,7 +41,7 @@ get_header(); ?>
 				</form> 
 
 			<?php } else { ?>
-				echo <?php get_template_part( 'template-parts/content', 'page' );
+				 <?php  get_template_part( 'template-parts/content', 'page' );
 			} ?>
 			
 		</main><!-- #main -->

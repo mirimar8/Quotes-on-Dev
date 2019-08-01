@@ -41,6 +41,9 @@ h1, h2 {
     background-color: transparent;
     border: 2px solid $brand-link-color;
     color: $brand-link-color;
+    font-size: 14px;
+    font-weight: 500;
+
 }
 .new-quote-button:hover {
     box-shadow: none;

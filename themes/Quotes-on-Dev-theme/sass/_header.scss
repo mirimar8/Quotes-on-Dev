@@ -3,5 +3,16 @@
         height: 50px;
         margin-top: 30px;
     }
+
+    @include tablet {
+        img {
+            height: 80px;
+        }
+    }
+    @include desktop {
+        img {
+            height: 100px;
+        }
+    }
    
 }

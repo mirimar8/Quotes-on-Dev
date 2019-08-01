@@ -1,10 +1,31 @@
-.site-footer {
+.site-info {
     margin-top: 90px;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+        margin: 0;
+    }
+
+    @include tablet {
+       flex-direction: row;
+       p {
+        margin: -4px;
+       }
+
+    }
+
+    @include desktop {
+        justify-content: flex-end;
+    }
 }
 .main-navigation {
     padding-bottom: 15px;
+    width: 315px;
     
+   
+
     li:not(:last-child) { 
         border-right: solid 1px #fff;
     }
@@ -13,11 +34,13 @@
         line-height: 1;
         padding-right: 1rem;
         margin-right: 1rem;
+
+        @include tablet {
+            border-right: solid 1px #fff;
+        }
     }
-   
+
     
-    
-    
-    
+ 
 
 }

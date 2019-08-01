@@ -1,7 +1,10 @@
 jQuery(function ($) {
+
+    let $homeQuotes = $(".home-quotes");
+
     $(".new-quote-button").on("click", function (event) {
         event.preventDefault();
-        $(".home-quotes").text('');
+        $homeQuotes.text('');
         $.ajax({
             method: "GET",
             url: qod_vars.rest_url + "wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1",
@@ -10,22 +13,22 @@ jQuery(function ($) {
             }
         }).done(function (response) {
             console.log(response);
-            $(".home-quotes").html(`<div class="quote-para">${response[0].content.rendered}</div> <div class="quote-author">${response[0].title.rendered}</div><span class="quote-source"> ${response[0]._qod_quote_source}</span> `);
+            $homeQuotes.html(`<div class="quote-para">${response[0].content.rendered}</div> <div class="quote-author">${response[0].title.rendered}</div><span class="quote-source"> ${response[0]._qod_quote_source}</span> `);
             history.pushState(response, "", response[0].slug);
         });
     });
 
-    $quoteSubForm = $(".quote-submission-form");
+    let $quoteSubForm = $(".quote-submission-form");
 
     $quoteSubForm.on("submit", function (event) {
         event.preventDefault();
 
-        $author = $("#author").val();
-        $quote = $("#quote").val();
-        $source = $("#source").val();
-        $sourceUrl = $("#source-url").val();
-        $errorMessage = $('#error-message');
-        $successMessage = $('#success-message');
+        let $author = $("#author").val();
+        let $quote = $("#quote").val();
+        let $source = $("#source").val();
+        let $sourceUrl = $("#source-url").val();
+        let $errorMessage = $('#error-message');
+        let $successMessage = $('#success-message');
 
 
         if ($author == '' || $quote == '') {
