@@ -42,4 +42,43 @@ h1, h2 {
 
 
 .quote-submission-form {
-}
+    div {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 0;
+
+     }
+    input, textarea {
+        margin-top: 10px;
+        width: 60%;
+        background-color: transparent;
+        border: 2px solid $brand-link-color;
+        color: $font-color;
+    }
+    input:focus {
+        color: $font-color;
+    }
+    
+    textarea {
+        height :80px;
+        width: 100%;
+        color: $font-color;
+
+    }
+    .submit-quote-button {
+        height: 40px;
+        width: 150px;
+        box-shadow: none;
+        text-shadow: none;
+    }
+    .submit-quote-button:hover {
+        box-shadow: none;
+        border-color: $brand-link-color;
+    }
+
+    input[value] {
+        color: $brand-link-color;
+        font-weight: 500;
+    }
+    }
+  

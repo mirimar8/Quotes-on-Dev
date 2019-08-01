@@ -24,7 +24,8 @@ get_header(); ?>
 					</div>
 					<div class="quote-text">	
 						<label for="quote">Quote</label>
-						<input id="quote" type="text" name="Quote">
+						<textarea id="quote" rows="2"></textarea>
+						<!-- <input id="quote" type="text" name="Quote"> -->
 					</div>
 					<div class="quote-source">
 						<label for="source of quote">Where did you find this quote? (e.g. book name)</label>
@@ -35,8 +36,8 @@ get_header(); ?>
 						<input id="source-url" type="text" name="Quote source">
 					</div>
 						<input class="submit-quote-button" type="submit" value="Submit Quote">
-						<span id="error-message"></span>
-						<span id="success-message"></span>
+						<p id="error-message"></p>
+						<p id="success-message"></p>
 
 				</form> 
 
