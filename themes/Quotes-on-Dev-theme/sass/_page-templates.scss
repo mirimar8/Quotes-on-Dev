@@ -30,6 +30,24 @@ h1, h2 {
 
 .home-quotes {
     font-size: 20px;
+    .entry-meta {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        span {
+            padding: 0 3px;
+        }
+        a {
+            font-style: italic;
+        }
+        @include tablet {
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+
+    
     
 }
 .new-quote-button {

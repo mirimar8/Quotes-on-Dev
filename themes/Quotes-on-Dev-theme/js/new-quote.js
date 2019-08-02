@@ -13,8 +13,16 @@ jQuery(function ($) {
             }
         }).done(function (response) {
             console.log(response);
-            $homeQuotes.html(`<div class="quote-para">${response[0].content.rendered}</div> <div class="quote-author">${response[0].title.rendered}</div><span class="quote-source"> ${response[0]._qod_quote_source}</span> `);
-            history.pushState(response, "", response[0].slug);
+            $homeQuotes.html(`<div class="quote-para">${response[0].content.rendered}</div>
+            <div class="entry-meta">
+                <span>-</span>
+                <div class="quote-author">${response[0].title.rendered}</div>
+                <span>,</span>
+                <a class="quote-source-url" href="${response[0]._qod_quote_source_url}">
+                    <span class="quote-source">${response[0]._qod_quote_source} </span>
+                </a>
+            </div>`);
+            history.pushState(response, "", qod_vars.home_url + "/" + response[0].slug);
         });
     });
 
@@ -60,7 +68,7 @@ jQuery(function ($) {
             }).done(function (data) {
                 console.log("posted");
                 $quoteSubForm.trigger('reset');
-                $successMessage.fadeIn().html("Quote submitted successfully!");
+                $successMessage.fadeIn().html("The quote submitted successfully!");
                 setTimeout(function () {
                     $successMessage.fadeOut();
                 }, 2000);

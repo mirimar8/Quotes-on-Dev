@@ -16,7 +16,7 @@ get_header(); ?>
 	
 
 		<?php
-			if ( is_user_logged_in() ) { ?>
+			if ( is_user_logged_in() ) : ?>
 				<form class="quote-submission-form" name="submit-quote">
 					<div class="quote-author">
 						<label for="author">Author of quote</label>
@@ -40,9 +40,11 @@ get_header(); ?>
 
 				</form> 
 
-			<?php } else { ?>
-				 <?php  get_template_part( 'template-parts/content', 'page' );
-			} ?>
+			<?php else : ?>
+				<p>Sorry, you must be logged in to submit a quote!</p>
+
+				<a href="<?php echo wp_login_url(); ?>">Click here to login.</a>
+			 <?php endif; ?>
 			
 		</main><!-- #main -->
 	</div><!-- #primary -->

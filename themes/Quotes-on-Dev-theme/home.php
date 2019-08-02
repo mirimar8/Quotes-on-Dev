@@ -10,8 +10,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<div class="home-quotes">
-
+		
 			<?php
 				$args = array(
 				'posts_per_page'   => 1,
@@ -22,16 +21,8 @@ get_header(); ?>
 			<?php $query = new WP_Query( $args ); ?>
 			<?php if ( $query->have_posts() ) : ?>
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-			<div class="entry-content">
-				<?php the_content('<div class="quote-para"></div>'); ?>
-			</div>
-
-			<div class="entry-meta">
-				<?php the_title('<div class="quote-author"></div>'); ?>
-				<span class="quote-source"></span>
 				
-			</div>
-					
+				<?php get_template_part( 'template-parts/content', 'single' ); ?>
 				
 				<?php endwhile; ?>
 					
@@ -41,8 +32,6 @@ get_header(); ?>
 			<?php else : ?>
 				<h2>Nothing found!</h2>
 			<?php endif; ?>
-
-		</div>
 
 
 			<button type="button" class="new-quote-button">Show Me Another!</button>

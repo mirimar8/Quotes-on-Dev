@@ -7,19 +7,23 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'large' ); ?>
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-		
-	<div class="entry-content">
-		<?php the_content(); ?>
-	</div><!-- .entry-content -->
+<div class="home-quotes">
+		<div class="entry-content">
+			<?php the_content('<div class="quote-para"></div>'); ?>
+		</div>
 
-	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<div class="entry-meta">
+			<span>-</span>
+			<?php the_title('<div class="quote-author"></div>'); ?>
+			<span>,</span>
+			<a href="<?php echo get_post_meta(get_the_ID(),'_qod_quote_source_url',true)?>">
+			<span class="quote-source"><?php echo get_post_meta(get_the_ID(),'_qod_quote_source',true)?></span></a>	
+		</div>
+					
+</div>
+					
+				
+	
 	
 
 	
-</article><!-- #post-## -->

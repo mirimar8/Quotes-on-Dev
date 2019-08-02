@@ -611,6 +611,23 @@ h1, h2 {
 
 .home-quotes {
   font-size: 20px; }
+  .home-quotes .entry-meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .home-quotes .entry-meta span {
+      padding: 0 3px; }
+    .home-quotes .entry-meta a {
+      font-style: italic; }
+    @media (min-width: 620px) {
+      .home-quotes .entry-meta p {
+        font-size: 20px; } }
 
 .new-quote-button {
   height: 40px;
