@@ -625,9 +625,9 @@ h1, h2 {
       padding: 0 3px; }
     .home-quotes .entry-meta a {
       font-style: italic; }
-    @media (min-width: 620px) {
-      .home-quotes .entry-meta p {
-        font-size: 20px; } }
+  @media (min-width: 620px) {
+    .home-quotes .quote-para p {
+      font-size: 26px; } }
 
 .new-quote-button {
   height: 40px;
@@ -639,8 +639,13 @@ h1, h2 {
   background-color: transparent;
   border: 2px solid #00cc00;
   color: #00cc00;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500; }
+  @media (min-width: 620px) {
+    .new-quote-button {
+      height: 50px;
+      width: 240px;
+      font-size: 18px; } }
 
 .new-quote-button:hover {
   -webkit-box-shadow: none;
@@ -662,6 +667,9 @@ h1, h2 {
         flex-wrap: wrap; }
     .archives-links .archives-block .archives-terms {
       padding: 5px 10px; }
+  @media (min-width: 620px) {
+    .archives-links {
+      font-size: 20px; } }
 
 .quote-submission-form div {
   display: -webkit-box;

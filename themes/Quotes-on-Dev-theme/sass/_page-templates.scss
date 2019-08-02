@@ -29,7 +29,7 @@ h1, h2 {
 
 
 .home-quotes {
-    font-size: 20px;
+    font-size: $font-size + 4;
     .entry-meta {
         display: flex;
         flex-direction: row;
@@ -40,11 +40,16 @@ h1, h2 {
         a {
             font-style: italic;
         }
-        @include tablet {
+        
+    }
+
+    @include tablet {
+        .quote-para {
             p {
-                font-size: 20px;
+                font-size: $font-size + 10;
             }
         }
+        
     }
 
     
@@ -59,8 +64,14 @@ h1, h2 {
     background-color: transparent;
     border: 2px solid $brand-link-color;
     color: $brand-link-color;
-    font-size: 14px;
+    font-size: $font-size ;
     font-weight: 500;
+
+    @include tablet {
+        height: 50px;
+        width: 240px;
+        font-size: $font-size +2;
+    }
 
 }
 .new-quote-button:hover {
@@ -79,6 +90,9 @@ h1, h2 {
         .archives-terms {
             padding: 5px 10px;
         }
+    }
+    @include tablet {
+        font-size: $font-size + 4;
     }
 }
 

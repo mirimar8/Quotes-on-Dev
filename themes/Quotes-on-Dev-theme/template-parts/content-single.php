@@ -8,7 +8,7 @@
 ?>
 
 <div class="home-quotes">
-		<div class="entry-content">
+		<div class="quote-para">
 			<?php the_content('<div class="quote-para"></div>'); ?>
 		</div>
 
