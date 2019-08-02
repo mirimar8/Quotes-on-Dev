@@ -59,3 +59,16 @@ i {
     }
 }
 
+.number-pagination {
+    .page-numbers {
+        padding: 4px;
+    }
+}
+
+.archive , .search {
+    .home-quotes , .page-title {
+        border-bottom: 1px dotted #fff;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+}

@@ -636,6 +636,14 @@ i {
     right: -170px;
     top: -30px; } }
 
+.number-pagination .page-numbers {
+  padding: 4px; }
+
+.archive .home-quotes, .archive .page-title, .search .home-quotes, .search .page-title {
+  border-bottom: 1px dotted #fff;
+  padding-bottom: 40px;
+  margin-bottom: 40px; }
+
 .site-header img {
   height: 50px;
   margin-top: 30px; }
@@ -850,11 +858,3 @@ i {
     font-size: 19px; }
   .search-form ::placeholder {
     font-size: 19px; } }
-
-.search .page-title {
-  border-bottom: 1px dotted #fff;
-  padding-bottom: 30px;
-  margin-bottom: 30px; }
-
-.number-pagination .page-numbers {
-  padding: 4px; }
