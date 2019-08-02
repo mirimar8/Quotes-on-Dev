@@ -73,6 +73,12 @@ function qod_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
 
+//enqueues our external font awesome stylesheet
+function enqueue_our_required_stylesheets(){
+	wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css'); 
+}
+add_action('wp_enqueue_scripts','enqueue_our_required_stylesheets');
+
 
 /**
  * Custom functions that act independently of the theme templates.

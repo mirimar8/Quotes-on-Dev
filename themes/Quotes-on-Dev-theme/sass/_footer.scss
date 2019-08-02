@@ -10,10 +10,9 @@
 
     @include tablet {
        flex-direction: row;
-       p {
-        margin: -4px;
-       }
-
+        p {
+            margin: -4px;
+        }
     }
 
     @include desktop {
@@ -24,8 +23,6 @@
     padding-bottom: 15px;
     width: 315px;
     
-   
-
     li:not(:last-child) { 
         border-right: solid 1px #fff;
     }
@@ -39,8 +36,4 @@
             border-right: solid 1px #fff;
         }
     }
-
-    
- 
-
 }

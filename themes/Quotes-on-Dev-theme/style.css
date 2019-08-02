@@ -609,121 +609,46 @@ body {
 h1, h2 {
   font-weight: 400; }
 
-.home-quotes {
-  font-size: 20px; }
-  .home-quotes .entry-meta {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    .home-quotes .entry-meta span {
-      padding: 0 3px; }
-    .home-quotes .entry-meta a {
-      font-style: italic; }
-  @media (min-width: 620px) {
-    .home-quotes .quote-para p {
-      font-size: 26px; } }
+i {
+  color: #F9BE3B; }
 
-.new-quote-button {
-  height: 40px;
-  width: 200px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  text-shadow: none;
-  margin-top: 50px;
-  background-color: transparent;
-  border: 2px solid #00cc00;
-  color: #00cc00;
-  font-size: 16px;
-  font-weight: 500; }
-  @media (min-width: 620px) {
-    .new-quote-button {
-      height: 50px;
-      width: 240px;
-      font-size: 18px; } }
+@media (min-width: 1080px) {
+  .site-content {
+    margin: 50px 175px 50px 200px;
+    width: 660px;
+    position: relative; }
+  .site-content::before {
+    content: "\f10d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #00cc00;
+    font-size: 116px;
+    position: absolute;
+    top: -30px;
+    left: -180px; }
+  .site-content::after {
+    content: "\f10e";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #00cc00;
+    font-size: 116px;
+    position: absolute;
+    right: -170px;
+    top: -30px; } }
 
-.new-quote-button:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border-color: #1b8517; }
-
-.archives-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .archives-links .archives-block {
-    margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    .archives-links .archives-block .archives-terms {
-      padding: 5px 10px; }
-  @media (min-width: 620px) {
-    .archives-links {
-      font-size: 20px; } }
-
-.quote-submission-form div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 15px 0; }
-
-.quote-submission-form input, .quote-submission-form textarea {
-  margin-top: 10px;
-  width: 60%;
-  background-color: transparent;
-  border: 2px solid #00cc00;
-  color: #ffffff; }
-
-.quote-submission-form input:focus {
-  color: #ffffff; }
-
-.quote-submission-form textarea {
-  height: 80px;
-  width: 100%;
-  color: #ffffff; }
-
-.quote-submission-form .submit-quote-button {
-  height: 40px;
-  width: 150px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  text-shadow: none; }
-
-.quote-submission-form .submit-quote-button:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border-color: #1b8517; }
-
-.quote-submission-form input[value] {
-  color: #00cc00;
-  font-weight: 500;
-  font-size: 14px; }
-
-.site-branding img {
+.site-header img {
   height: 50px;
   margin-top: 30px; }
 
 @media (min-width: 620px) {
-  .site-branding img {
+  .site-header img {
     height: 80px; } }
 
 @media (min-width: 1080px) {
-  .site-branding img {
-    height: 100px; } }
+  .site-header .site-branding {
+    text-align: center; }
+  .site-header img {
+    height: 110px; } }
 
 .site-info {
   margin-top: 90px;
@@ -763,3 +688,127 @@ h1, h2 {
     @media (min-width: 620px) {
       .main-navigation li {
         border-right: solid 1px #fff; } }
+
+.home-quotes {
+  font-size: 20px; }
+  .home-quotes .entry-meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .home-quotes .entry-meta span {
+      padding: 0 3px; }
+    .home-quotes .entry-meta a {
+      font-style: italic; }
+  @media (min-width: 620px) {
+    .home-quotes .quote-para p {
+      font-size: 26px; } }
+  @media (min-width: 1080px) {
+    .home-quotes .quote-para p {
+      font-size: 41px; } }
+
+.new-quote-button {
+  height: 40px;
+  width: 200px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  margin-top: 50px;
+  background-color: transparent;
+  border: 2px solid #00cc00;
+  color: #00cc00;
+  font-size: 16px;
+  font-weight: 500; }
+  @media (min-width: 620px) {
+    .new-quote-button {
+      height: 50px;
+      width: 240px;
+      font-size: 18px; } }
+  @media (min-width: 1080px) {
+    .new-quote-button {
+      height: 50px;
+      width: 240px;
+      font-size: 18px;
+      margin: 50px 200px 0 200px; } }
+
+.new-quote-button:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #1b8517;
+  color: #1b8517; }
+
+.archives-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .archives-links .archives-block {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .archives-links .archives-block .archives-terms {
+      padding-right: 15px;
+      padding-bottom: 10px; }
+  @media (min-width: 620px) {
+    .archives-links {
+      font-size: 20px; } }
+
+.quote-submission-form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px 0; }
+
+.quote-submission-form input, .quote-submission-form textarea {
+  margin-top: 10px;
+  width: 60%;
+  background-color: transparent;
+  border: 2px solid #00cc00;
+  color: #ffffff; }
+
+.quote-submission-form input:focus {
+  color: #ffffff; }
+
+.quote-submission-form textarea {
+  height: 80px;
+  width: 100%;
+  color: #ffffff; }
+
+.quote-submission-form .submit-quote-button {
+  height: 40px;
+  width: 150px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none; }
+
+.quote-submission-form .submit-quote-button:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #1b8517;
+  color: #1b8517; }
+
+.quote-submission-form input[value] {
+  color: #00cc00;
+  font-weight: 500;
+  font-size: 14px; }
+
+@media (min-width: 1080px) {
+  .quote-submission-form .submit-quote-button {
+    height: 40px;
+    width: 200px; }
+  .quote-submission-form input[value] {
+    font-size: 18px;
+    font-weight: 500; } }

@@ -1,0 +1,16 @@
+.archives-links {
+    display: flex;
+    flex-wrap: wrap;
+    .archives-block {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        .archives-terms {
+            padding-right: 15px;
+            padding-bottom: 10px;
+        }
+    }
+    @include tablet {
+        font-size: $font-size + 4;
+    }
+}

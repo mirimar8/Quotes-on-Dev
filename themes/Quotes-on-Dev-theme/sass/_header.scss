@@ -1,4 +1,4 @@
-.site-branding {
+.site-header {
     img {
         height: 50px;
         margin-top: 30px;
@@ -10,9 +10,11 @@
         }
     }
     @include desktop {
+        .site-branding {
+            text-align: center;
+        }
         img {
-            height: 100px;
+            height: 110px;
         }
     }
-   
 }

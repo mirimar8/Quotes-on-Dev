@@ -27,113 +27,35 @@ h1, h2 {
     font-weight: 400;
 }
 
-
-.home-quotes {
-    font-size: $font-size + 4;
-    .entry-meta {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        span {
-            padding: 0 3px;
-        }
-        a {
-            font-style: italic;
-        }
-        
-    }
-
-    @include tablet {
-        .quote-para {
-            p {
-                font-size: $font-size + 10;
-            }
-        }
-        
-    }
-
+i {
+    color: #F9BE3B;
+}
+@include desktop {
     
-    
-}
-.new-quote-button {
-    height: 40px;
-    width: 200px;
-    box-shadow: none;
-    text-shadow: none;
-    margin-top: 50px;
-    background-color: transparent;
-    border: 2px solid $brand-link-color;
-    color: $brand-link-color;
-    font-size: $font-size ;
-    font-weight: 500;
-
-    @include tablet {
-        height: 50px;
-        width: 240px;
-        font-size: $font-size +2;
+    .site-content {
+        margin: 50px 175px 50px 200px;
+        width: 660px;
+        position: relative;
     }
-
-}
-.new-quote-button:hover {
-    box-shadow: none;
-    border-color: $brand-link-color-hover;
-}
-
-
-.archives-links {
-    display: flex;
-    flex-wrap: wrap;
-    .archives-block {
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        .archives-terms {
-            padding: 5px 10px;
-        }
-    }
-    @include tablet {
-        font-size: $font-size + 4;
-    }
-}
-
-
-.quote-submission-form {
-    div {
-        display: flex;
-        flex-direction: column;
-        padding: 15px 0;
-     }
-    input, textarea {
-        margin-top: 10px;
-        width: 60%;
-        background-color: transparent;
-        border: 2px solid $brand-link-color;
-        color: $font-color;
-    }
-    input:focus {
-        color: $font-color;
-    }
-    
-    textarea {
-        height :80px;
-        width: 100%;
-        color: $font-color;
-    }
-    .submit-quote-button {
-        height: 40px;
-        width: 150px;
-        box-shadow: none;
-        text-shadow: none;
-    }
-    .submit-quote-button:hover {
-        box-shadow: none;
-        border-color: $brand-link-color-hover;
-    }
-
-    input[value] {
+    .site-content::before {
+        content: "\f10d";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
         color: $brand-link-color;
-        font-weight: 500;
-        font-size: 14px;
+        font-size: $font-size + 100;
+        position: absolute;
+        top: -30px;
+        left: -180px;
+    }
+    .site-content::after {
+        content: "\f10e";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: $brand-link-color;
+        font-size: $font-size + 100;
+        position: absolute;
+        right:-170px;
+        top: -30px;
     }
 }
-  
+
