@@ -1,0 +1,42 @@
+.search-form {
+    fieldset {
+        border: none;
+        padding: 0;
+        
+        input[type=search] {
+            background-color: transparent;
+            border: 2px solid $brand-link-color;
+            width: 240px;
+            padding: 5px;
+            padding-left: 7px;
+            color: $font-color;
+            @include tablet {
+                padding-top: 10px;
+            }
+        }
+        input[type=search]:focus {
+            border-color: $font-color;
+        }
+        button {
+            background-color: transparent;
+            box-shadow: none;
+            border: none;
+            padding: 0;
+            padding-left: 7px;
+
+            i {
+                color: $brand-link-color;
+                text-shadow: none;
+                font-size: $font-size;
+                @include tablet {
+                    font-size: $font-size + 4;
+                }
+            }
+        }
+    }
+    @include tablet {
+        ::placeholder {
+            font-size: $font-size +3;
+        }
+    }       
+}
