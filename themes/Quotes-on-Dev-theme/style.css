@@ -750,6 +750,9 @@ i {
   border-color: #1b8517;
   color: #1b8517; }
 
+.new-quote-button:focus {
+  display: none; }
+
 .archives-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -807,6 +810,9 @@ i {
           box-shadow: none;
   border-color: #1b8517;
   color: #1b8517; }
+
+.quote-submission-form .submit-quote-button:focus {
+  display: none; }
 
 .quote-submission-form input[value] {
   color: #00cc00;
