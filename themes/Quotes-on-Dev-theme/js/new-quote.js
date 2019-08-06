@@ -1,18 +1,17 @@
 jQuery(function ($) {
 
-    const $homeQuotes = $(".home-quotes");
+    const $homeQuotes = $('.home-quotes');
 
-    $(".new-quote-button").on("click", function (event) {
+    $('.new-quote-button').on('click', function (event) {
         event.preventDefault();
         $homeQuotes.text('');
         $.ajax({
-            method: "GET",
-            url: qod_vars.rest_url + "wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1",
+            method: 'GET',
+            url: qod_vars.rest_url + 'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
             beforeSend: function (xhr) {
-                xhr.setRequestHeader("X-WP-Nonce", qod_vars.wpapi_nonce);
+                xhr.setRequestHeader('X-WP-Nonce', qod_vars.wpapi_nonce);
             }
         }).done(function (response) {
-            console.log(response);
             $homeQuotes.html(`<div class="quote-para">${response[0].content.rendered}</div>
             <div class="entry-meta">
                 <div class="quote-author"> - ${response[0].title.rendered}</div>
@@ -21,26 +20,26 @@ jQuery(function ($) {
                     <span class="quote-source">${response[0]._qod_quote_source} </span>
                 </a>
             </div>`);
-            history.pushState(response, "", qod_vars.home_url + "/" + response[0].slug);
+            history.pushState(response, '', qod_vars.home_url + '/' + response[0].slug);
         });
     });
 
-    const $quoteSubForm = $(".quote-submission-form");
+    const $quoteSubForm = $('.quote-submission-form');
 
-    $quoteSubForm.on("submit", function (event) {
+    $quoteSubForm.on('submit', function (event) {
         event.preventDefault();
 
-        const $author = $("#author").val();
-        const $quote = $("#quote").val();
-        const $source = $("#source").val();
-        const $sourceUrl = $("#source-url").val();
+        const $author = $('#author').val();
+        const $quote = $('#quote').val();
+        const $source = $('#source').val();
+        const $sourceUrl = $('#source-url').val();
         const $errorMessage = $('#error-message');
         const $successMessage = $('#success-message');
 
 
         if ($author === '' || $quote === '') {
             $quoteSubForm.trigger('reset');
-            $errorMessage.fadeIn().html("The quote wasn't submitted. Please fill in the required fields.");
+            $errorMessage.fadeIn().html('The quote was not submitted. Please fill in the required fields.');
             setTimeout(function () {
                 $errorMessage.fadeOut();
             }, 2000);
@@ -51,19 +50,18 @@ jQuery(function ($) {
                 content: $quote,
                 _qod_quote_source: $source,
                 _qod_quote_source_url: $sourceUrl,
-                post_status: "pending"
-            }
+                post_status: 'pending'
+            };
             $.ajax({
-                method: "POST",
-                url: qod_vars.rest_url + "wp/v2/posts",
+                method: 'POST',
+                url: qod_vars.rest_url + 'wp/v2/posts',
                 data,
                 beforeSend: function (xhr) {
-                    xhr.setRequestHeader("X-WP-Nonce", qod_vars.wpapi_nonce);
+                    xhr.setRequestHeader('X-WP-Nonce', qod_vars.wpapi_nonce);
                 }
-            }).done(function (data) {
-                console.log("posted");
+            }).done(function () {
                 $quoteSubForm.trigger('reset');
-                $successMessage.fadeIn().html("The quote submitted successfully!");
+                $successMessage.fadeIn().html('The quote submitted successfully!');
                 setTimeout(function () {
                     $successMessage.fadeOut();
                 }, 2000);
