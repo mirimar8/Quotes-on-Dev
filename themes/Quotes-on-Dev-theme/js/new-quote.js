@@ -1,6 +1,6 @@
 jQuery(function ($) {
 
-    let $homeQuotes = $(".home-quotes");
+    const $homeQuotes = $(".home-quotes");
 
     $(".new-quote-button").on("click", function (event) {
         event.preventDefault();
@@ -25,20 +25,20 @@ jQuery(function ($) {
         });
     });
 
-    let $quoteSubForm = $(".quote-submission-form");
+    const $quoteSubForm = $(".quote-submission-form");
 
     $quoteSubForm.on("submit", function (event) {
         event.preventDefault();
 
-        let $author = $("#author").val();
-        let $quote = $("#quote").val();
-        let $source = $("#source").val();
-        let $sourceUrl = $("#source-url").val();
-        let $errorMessage = $('#error-message');
-        let $successMessage = $('#success-message');
+        const $author = $("#author").val();
+        const $quote = $("#quote").val();
+        const $source = $("#source").val();
+        const $sourceUrl = $("#source-url").val();
+        const $errorMessage = $('#error-message');
+        const $successMessage = $('#success-message');
 
 
-        if ($author == '' || $quote == '') {
+        if ($author === '' || $quote === '') {
             $quoteSubForm.trigger('reset');
             $errorMessage.fadeIn().html("The quote wasn't submitted. Please fill in the required fields.");
             setTimeout(function () {
@@ -60,10 +60,6 @@ jQuery(function ($) {
                 beforeSend: function (xhr) {
                     xhr.setRequestHeader("X-WP-Nonce", qod_vars.wpapi_nonce);
                 }
-                // success: function (data) {
-                //     $(".quote-submission-form").trigger('reset');
-                //     $('#success-message').html("Quote submitted successfully!");
-                // }
             }).done(function (data) {
                 console.log("posted");
                 $quoteSubForm.trigger('reset');
@@ -74,6 +70,6 @@ jQuery(function ($) {
 
 
             });
-        };
+        }
     });
 });

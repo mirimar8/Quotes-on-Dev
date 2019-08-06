@@ -16,8 +16,6 @@
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</nav><!-- #site-navigation -->
 
-				
-
 					<p>Brought to you by
 					<a href="<?php echo esc_url( 'https://redacademy.com/' ); ?>">
 					<?php printf( 'RED Academy' ); ?></a></p>

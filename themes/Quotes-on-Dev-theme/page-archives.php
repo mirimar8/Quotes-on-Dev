@@ -14,7 +14,6 @@ get_header(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-
 			<h2>Quote Authors</h2>
 				
 			<div class="archives-links">

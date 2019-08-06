@@ -64,12 +64,12 @@ function qod_scripts() {
 	$script_url = get_template_directory_uri() . '/build/js/new-quote.min.js';
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'qod_quotes', $script_url, array( 'jquery' ), false, true );
-   wp_localize_script( 'qod_quotes', 'qod_vars', array(
+   	wp_localize_script( 'qod_quotes', 'qod_vars', array(
 	   'rest_url' => esc_url_raw( rest_url() ),
 	   'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
 	   'post_id' => get_the_ID(),
 	   'home_url' => home_url(),
-   ) );
+   	) );
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
 
