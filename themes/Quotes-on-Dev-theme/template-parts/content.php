@@ -14,9 +14,18 @@
 
 		<div class="entry-meta">
 			<?php the_title('<div class="quote-author">- </div>'); ?>
-			<!-- <span>,</span> -->
-			<a href="<?php echo get_post_meta(get_the_ID(),'_qod_quote_source_url',true)?>">
-			<span class="quote-source"><?php echo get_post_meta(get_the_ID(),'_qod_quote_source',true)?></span></a>	
+
+			<?php if ( get_post_meta(get_the_ID(),'_qod_quote_source',true) !== '' ) {
+				echo ', ';
+				} ?>
+				
+			<?php if ( get_post_meta(get_the_ID(),'_qod_quote_source_url',true) === '' ) { ?>
+				<span class="quote-source"><?php echo get_post_meta(get_the_ID(),'_qod_quote_source',true)?></span>
+			<?php } else { ?>
+				<a href="<?php echo get_post_meta(get_the_ID(),'_qod_quote_source_url',true)?>">
+				<span class="quote-source"><?php echo get_post_meta(get_the_ID(),'_qod_quote_source',true)?></span></a>
+			<?php } ?>
+
 		</div>
 					
 </div>
