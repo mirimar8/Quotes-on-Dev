@@ -709,8 +709,10 @@ i {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
+    .home-quotes .entry-meta .quote-author {
+      padding-right: 5px; }
     .home-quotes .entry-meta span {
-      padding: 0 3px; }
+      padding: 0 5px; }
     .home-quotes .entry-meta a {
       font-style: italic; }
   @media (min-width: 620px) {

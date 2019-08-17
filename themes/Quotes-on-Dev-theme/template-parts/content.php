@@ -13,9 +13,8 @@
 		</div>
 
 		<div class="entry-meta">
-			<span>-</span>
-			<?php the_title('<div class="quote-author"></div>'); ?>
-			<span>,</span>
+			<?php the_title('<div class="quote-author">- </div>'); ?>
+			<!-- <span>,</span> -->
 			<a href="<?php echo get_post_meta(get_the_ID(),'_qod_quote_source_url',true)?>">
 			<span class="quote-source"><?php echo get_post_meta(get_the_ID(),'_qod_quote_source',true)?></span></a>	
 		</div>

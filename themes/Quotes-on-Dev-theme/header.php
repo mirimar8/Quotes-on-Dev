@@ -22,7 +22,7 @@
 
 			<header id="masthead" class="site-header" role="banner">
 				<div class="site-branding">
-					<a href="http://localhost:8888/Quotes-on-Dev/"><img src=" <?php echo get_stylesheet_directory_uri(); ?>/images/qod-logo.svg" alt="qod logo"></a>
+					<a href="<?php echo home_url() ?>"><img src=" <?php echo get_stylesheet_directory_uri(); ?>/images/qod-logo.svg" alt="qod logo"></a>
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->
