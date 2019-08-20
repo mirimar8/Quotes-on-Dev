@@ -32,15 +32,17 @@
 					<?php the_excerpt(); ?>
 				</div><!-- .entry-summary -->
 
-				</article><!-- #post-## -->
+				
 				
 				<?php endwhile; ?>
 					
 
 				<?php wp_reset_postdata(); ?>
 				
-			<?php else : ?>
-				<h2>Nothing found!</h2>
-			<?php endif; ?>
+				<?php else : ?>
+					<h2>Nothing found!</h2>
+				<?php endif; ?>
+
+				</article><!-- #post-## -->
 
 
