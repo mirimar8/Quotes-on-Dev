@@ -30,20 +30,6 @@ jQuery(function ($) {
                 <div class="quote-author"> - ${response[0].title.rendered}</div>
                 ${comma}${quote}
             </div>`);
-            console.log(response[0]._qod_quote_source);
-
-
-
-            // $homeQuotes.html(`< div class= "quote-para" > ${ response[0].content.rendered }</div >
-            // <div class="entry-meta">
-            //     <div class="quote-author"> - ${response[0].title.rendered}</div>
-            // <span>,</span>
-            //     <a class="quote-source-url" href="${response[0]._qod_quote_source_url}">
-            //         <span class="quote-source">${response[0]._qod_quote_source} </span>
-            //     </a>
-            // </div > `);
-
-
 
             history.pushState(response, '', qod_vars.home_url + '/' + response[0].slug);
         });
