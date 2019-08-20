@@ -102,13 +102,13 @@ require get_template_directory() . '/inc/api.php';
 
 
 
-function num_posts_per_page( $query ) {
+function results_per_page( $query ) {
   global $wp_the_query;
   if ( ( ! is_admin() ) && ( $query === $wp_the_query ) && ( $query->is_search() ) ) {
     $query->set( 'posts_per_page', 10 );
   }
 }
-add_action( 'pre_get_posts',  'num_posts_per_page'  );
+add_action( 'pre_get_posts',  'results_per_page'  );
 
 
 
