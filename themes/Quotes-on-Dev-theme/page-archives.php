@@ -59,7 +59,7 @@ get_header(); ?>
 						$term_list = '<p class="archives-block">';
 						foreach ( $terms as $term ) {
 							$i++;
-							$term_list .= '<a class="archives-terms" href="' . esc_url( get_term_link( $term ) ) . '" alt="' . esc_attr( sprintf( __( 'View all post filed under %s', 'my_localization_domain' ), $term->name ) ) . '">' . $term->name . '</a><br>';
+							$term_list .= '<a class="archives-terms" href="' . esc_url( get_term_link( $term ) ) . '" title="' . esc_attr( sprintf( __( 'View all post filed under %s', 'my_localization_domain' ), $term->name ) ) . '">' . $term->name . '</a><br>';
 						}
 						echo $term_list;
 					}
@@ -81,7 +81,7 @@ get_header(); ?>
 						$term_list = '<p class="archives-block">';
 						foreach ( $terms as $term ) {
 							$i++;
-							$term_list .= '<a class="archives-terms" href="' . esc_url( get_term_link( $term ) ) . '" alt="' . esc_attr( sprintf( __( 'View all post filed under %s', 'my_localization_domain' ), $term->name ) ) . '">' . $term->name . '</a><br>';
+							$term_list .= '<a class="archives-terms" href="' . esc_url( get_term_link( $term ) ) . '" title="' . esc_attr( sprintf( __( 'View all post filed under %s', 'my_localization_domain' ), $term->name ) ) . '">' . $term->name . '</a><br>';
 						}
 						echo $term_list;
 					}
